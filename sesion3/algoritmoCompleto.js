@@ -8,7 +8,16 @@ const rl = readline.createInterface({
 // ALGORITMO QUE PUEDA EJECUTAR TODOS LOS EJERCICIOS CON UN MENU DE SELECCIÓN NUMERICA Y AL FINALIZAR EL EJERCICIO VOLVER AL MENU A MODO DE QUE EL PROGRAMA NO SE CIERRE.
 
 function MenuInicio(){
-    rl.question("Considera que para salir del programa ingresa 8 - Seleccione el numero del programa a ejecutar: ", (nPrograma)=>{
+    console.log("Seleccione una opción:");
+    console.log("1. Determinar si un número es positivo, negativo o cero.");
+    console.log("2. Calcular el mayor de 3 números.");
+    console.log("3. Calcular el factorial de un número.");
+    console.log("4. Determinar si un número es par o impar.");
+    console.log("5. Mezclar colores primarios.");
+    console.log("6. Determinar nombre del mes.");
+    console.log("7. Determinar tipo de vehículo.");
+
+    rl.question("Seleccione el numero del programa a ejecutar: ", (nPrograma)=>{
         switch (parseInt(nPrograma)) {
             case 1:
                 console.log("Ejecutando programa #1");
@@ -118,7 +127,7 @@ rl.question("Ingrese el primer numero: ", (numero1)=>{
 function ejercicio3(){
     rl.question("digite el numero a realizar el factorial: ", (n1)=> {
         let resultado = 1
-        for (let i = 0; i <=parseFloat(n1); i++) {
+        for (let i = 1; i <=parseFloat(n1); i++) {
             resultado *= i;
         }
         console.log("el factorial de " + n1 +" es: " +resultado );
